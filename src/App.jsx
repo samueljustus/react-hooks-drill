@@ -1,5 +1,5 @@
-import Home from "./Home"
-import Interval from "./Interval"
+
+import Form from "./Form";
 
 
 
@@ -7,10 +7,9 @@ function App() {
   
   return (
     <>
-      <Interval />
-      <Home />
+      <Form />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
