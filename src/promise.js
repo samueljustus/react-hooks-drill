@@ -80,21 +80,9 @@
 
 // runProcess()
 
-let data = {
-  name: "John Smith",
-  age: 30,
-  hobbies: ["Programming", "Video Games"]
-};
+function reducer(state, action) {
+ return state + action
+}
 
-// {name:"John Smith",age:30,hobbies:["Programming","Video Games"]}
-let miny = JSON.stringify(data);
-console.log(miny)
-
-// The 4 parameter signifys 4 spaces. You can also use "\t".
-/* {
- *     name: "John Smith",
- *     age: 30,
- *     ...
- */
-let pretty = JSON.stringify(data, null, 4);
-console.log(pretty)
+let res = [1, 2, 3].reduce(reducer)
+console.log(res)
