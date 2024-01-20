@@ -66,16 +66,35 @@
 //   async function () {}
 // )();
 
-const runProcess = async () => {
-    try {
-        const response = await fetch(
-          "https://jsonplaceholder.typicode.com/todos/1"
-        );
-        const jsonObject = response.json();
-        console.log(jsonObject);
-      } catch (error) {
-        console.log(error);
-      }
-}
+// const runProcess = async () => {
+//     try {
+//         const response = await fetch(
+//           "https://jsonplaceholder.typicode.com/todos/1"
+//         );
+//         const jsonObject = response.json();
+//         console.log(jsonObject);
+//       } catch (error) {
+//         console.log(error);
+//       }
+// }
 
-runProcess()
+// runProcess()
+
+let data = {
+  name: "John Smith",
+  age: 30,
+  hobbies: ["Programming", "Video Games"]
+};
+
+// {name:"John Smith",age:30,hobbies:["Programming","Video Games"]}
+let miny = JSON.stringify(data);
+console.log(miny)
+
+// The 4 parameter signifys 4 spaces. You can also use "\t".
+/* {
+ *     name: "John Smith",
+ *     age: 30,
+ *     ...
+ */
+let pretty = JSON.stringify(data, null, 4);
+console.log(pretty)
